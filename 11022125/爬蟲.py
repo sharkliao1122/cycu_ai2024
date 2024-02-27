@@ -22,10 +22,7 @@ for entry in feed.entries:
     print(f'Summary: {entry.summary}')
     print('-----------------------------------')
 
-#若是標題中含有台灣，則列印出來
+#若是標題中含有台灣，則列印出來，並用紅色字體標示
 
     if '台灣' in title:
-        print(f'Title: {title}')
-        print(f'Content: {response.text}')
-        print('-----------------------------------')    
-    
+        print('\033[31m' + title + '\033[0m')   #紅色字體   
